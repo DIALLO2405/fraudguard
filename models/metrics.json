@@ -1,0 +1,33 @@
+{
+  "meilleur_modele": "Random Forest",
+  "recall": 0.997,
+  "precision": 0.9945,
+  "f1_score": 0.9957,
+  "auc_roc": 0.9991,
+  "comparaison": {
+    "Logistic Regression": {
+      "recall": 0.913,
+      "precision": 0.0491,
+      "f1": 0.0932,
+      "auc": 0.9839
+    },
+    "Random Forest": {
+      "recall": 0.997,
+      "precision": 0.9945,
+      "f1": 0.9957,
+      "auc": 0.9991
+    },
+    "XGBoost": {
+      "recall": 0.9976,
+      "precision": 0.6052,
+      "f1": 0.7534,
+      "auc": 0.9984
+    },
+    "LightGBM": {
+      "recall": 0.9976,
+      "precision": 0.9664,
+      "f1": 0.9817,
+      "auc": 0.9986
+    }
+  }
+}

@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+venv/
+
+# Node
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Données lourdes
+data/transactions.csv
+
+# Modèles (trop lourds pour GitHub)
+models/*.pkl
+
+# OS
+.DS_Store
+Thumbs.db
