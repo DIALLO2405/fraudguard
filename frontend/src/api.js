@@ -1,12 +1,12 @@
-// ═══════════════════════════════════════════════════════════
-// api.js — Communication avec le backend FastAPI
-// ═══════════════════════════════════════════════════════════
-
 import axios from 'axios'
 
-const API = axios.create({ baseURL: '/api' })
+const BASE_URL = import.meta.env.VITE_API_URL 
+  || 'https://fraudguard-loca.onrender.com'
 
-export const getHealth       = ()       => API.get('/health')
-export const getMetrics      = ()       => API.get('/model_metrics')
-export const predire         = (data)   => API.post('/predict', data)
-export const predireBatch    = (liste)  => API.post('/batch_predict', { transactions: liste })
+const API = axios.create({ baseURL: BASE_URL })
+
+export const getHealth    = ()      => API.get('/health')
+export const getMetrics   = ()      => API.get('/model_metrics')
+export const predire      = (data)  => API.post('/predict', data)
+export const predireBatch = (liste) => API.post('/batch_predict',
+                              { transactions: liste })
